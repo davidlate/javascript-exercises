@@ -9,7 +9,9 @@ const reverseString = function(string) {
         newArray[newIndex] = myArray[i];
     }
 
-    return myArray.toString();
+    newArray = newArray.toString().replace(/,/g, "");
+
+    return newArray;
 };
 
 // Do not edit below this line
