@@ -1,17 +1,15 @@
-const reverseString = function(string) {
+const reverseString = function (string) {
+  let myArray = string.split("");
+  let newArray = [];
 
-    let myArray = string.split("");
-    let newArray = [];
+  for (i in myArray) {
+    let newIndex = myArray.length - 1 - i;
+    newArray[newIndex] = myArray[i];
+  }
 
+  newArray = newArray.toString().replace(/,/g, "");
 
-    for (i in myArray){
-        let newIndex = myArray.length - 1 - i;
-        newArray[newIndex] = myArray[i];
-    }
-
-    newArray = newArray.toString().replace(/,/g, "");
-
-    return newArray;
+  return newArray;
 };
 
 // Do not edit below this line
